@@ -1,0 +1,6220 @@
+﻿{
+  "x-generator": "NSwag v13.3.0.0 (NJsonSchema v10.1.11.0 (Newtonsoft.Json v12.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Anubis API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/Export/ExportCompany": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportCompany",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllCompanyQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportContact": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportContact",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllContactQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportFTL": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportFTL",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllFTLQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportLTL": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportLTL",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllLTLQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportFreightCode": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportFreightCode",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllFreightCode"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportLinkedClient": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportLinkedClient",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllCompanyLinkedClient"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportHistoricFreightRates": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportHistoricFreightRates",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllHistoricFreightRates"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportApprovalPending": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportApprovalPending",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllApprovalPending"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportRejectedShipments": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportRejectedShipments",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllRejectedShipments"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportTenderedShipments": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportTenderedShipments",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllTenderedShipments"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportApprovedInvoice": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportApprovedInvoice",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllApprovedInvoice"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportApprovedRequiredInvoices": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportApprovedRequiredInvoices",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllApprovedRequiredInvoices"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportWeight": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportWeight",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllWeight"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportMiles": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportMiles",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllMiles"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportAccessorial": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportAccessorial",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllAccessorial"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportTeamMembers": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportTeamMembers",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllTeamMember"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportFTLLanes": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportFTLLanes",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportFTLLanes"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Export/ExportLTLLanes": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_ExportLTLLanes",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportLTLLanes"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCategory/GetCategories": {
+      "post": {
+        "tags": [
+          "FreightCategory"
+        ],
+        "operationId": "FreightCategory_GetCategories",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridCategoryQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfFreightCategory"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCategory/AddEditCategory": {
+      "post": {
+        "tags": [
+          "FreightCategory"
+        ],
+        "operationId": "FreightCategory_AddEditCategory",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCategoryCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCategory/RemoveCategory": {
+      "post": {
+        "tags": [
+          "FreightCategory"
+        ],
+        "operationId": "FreightCategory_RemoveCategory",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveCategoryCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetCompanys": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetCompanys",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridCompanyQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfFreightCompany"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/EditCompany": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_EditCompany",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCompanyCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/AddCompany": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_AddCompany",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCompanyCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/ExportWG": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_ExportWG",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportAllCompanyQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/{id}": {
+      "get": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetCompanyDetails",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FreightCompanyEditDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetCompanyContacts": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetCompanyContacts",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridCompanyContactQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfCompanyContactDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/AddCompanyContact": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_AddCompanyContact",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCompanyContactCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/RemoveContact": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_RemoveContact",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveContactCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetCompanyBasicInformation": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetCompanyBasicInformation",
+        "parameters": [
+          {
+            "name": "ddlFor",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicInformationCompanyDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetFreightCodeList": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetFreightCodeList",
+        "parameters": [
+          {
+            "name": "company_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicInformationCompanyDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetFTL": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetFTL",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridFTLQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfFtlDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/AddEditFTL": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_AddEditFTL",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFTLCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/ActiveDeleteFTL": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_ActiveDeleteFTL",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveAndDeactiveFTLCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetLTL": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetLTL",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridLTLQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfLtlDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/AddEditLTL": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_AddEditLTL",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateLTLCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/ActiveDeleteLTL": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_ActiveDeleteLTL",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveAndDeactiveLTLCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetMiles": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetMiles",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridWGSMilesQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfWGSMilesDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/AddEditWGSMiles": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_AddEditWGSMiles",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWGSMilesCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetWeights": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetWeights",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridWGSWeightQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfWGSCompanyWeights"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/AddEditWGSWeight": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_AddEditWGSWeight",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWGSWeightCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetWGCGrid": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetWGCGrid",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridWGSQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridWGSResultOfWGSCompanyMilesAndWGSCompanyWeightsAndWGSCompanyPrice"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/UpdateWGCPrice": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_UpdateWGCPrice",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateWGSWeightPricesCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetFreightCompanyCodes": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetFreightCompanyCodes",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridFreightCodeQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfFreightCompanyCodes"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/AddEditFreightCode": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_AddEditFreightCode",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FreightCodeCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/RemoveCompanyCode": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_RemoveCompanyCode",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveFreightCodeCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetWGSAccesrails": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetWGSAccesrails",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridWGSAccesrailsQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfWGSAccesrailsDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/AddEditWGSAccesrail": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_AddEditWGSAccesrail",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWGSAccesrailsCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/RemoveWGSAccesrail": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_RemoveWGSAccesrail",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveWGSAccesrailsCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetLinkedClients": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetLinkedClients",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridLinkedClientsQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfCompanyLinkedClients"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetLinkedClientPreferences": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetLinkedClientPreferences",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetLinkedClientDetailsQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LinkedClientDetailsDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/AddEditLinkedClinets": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_AddEditLinkedClinets",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateLinkedClientsCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/RemoveLinkedClient": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_RemoveLinkedClient",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveLinkedClientCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/InsertLabourCost": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_InsertLabourCost",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertLabourQuoteCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetLabourCost": {
+      "get": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetLabourCost",
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number",
+                  "format": "decimal"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetCompanyDocuments": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetCompanyDocuments",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GridCompanyDocumentsQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfCompanyDocuments"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/SaveCompanyDocuments": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_SaveCompanyDocuments",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompanyDocumentsCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetHistoricFreightRates",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHistoricFreightRatesQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfFreightRates"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/GetPermissions": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_GetPermissions",
+        "parameters": [
+          {
+            "name": "Company_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LU_Permissions"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/FreightCompany/AddUpdatePermissions": {
+      "post": {
+        "tags": [
+          "FreightCompany"
+        ],
+        "operationId": "FreightCompany_AddUpdatePermissions",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUpdatePermissionsCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/TeamMember/GetAllTeamMembers": {
+      "post": {
+        "tags": [
+          "TeamMember"
+        ],
+        "operationId": "TeamMember_GetAllTeamMembers",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllTeamMemberGridQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GridResultOfTeamMemberDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/TeamMember/AddUpdateTeamMember": {
+      "post": {
+        "tags": [
+          "TeamMember"
+        ],
+        "operationId": "TeamMember_AddUpdateTeamMember",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUpdateTeamMemberCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/TeamMember/RemoveTeamMember": {
+      "post": {
+        "tags": [
+          "TeamMember"
+        ],
+        "operationId": "TeamMember_RemoveTeamMember",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveTeamMemberCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/TeamMember/GetAllTeamMembersDDL": {
+      "get": {
+        "tags": [
+          "TeamMember"
+        ],
+        "operationId": "TeamMember_GetAllTeamMembersDDL",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OptionVm"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/TeamMember/AssignShipmentToTeamMember": {
+      "post": {
+        "tags": [
+          "TeamMember"
+        ],
+        "operationId": "TeamMember_AssignShipmentToTeamMember",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssignShipmentToTeamMemberCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ExportAllCompanyQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "GridQuery": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "filter": {
+            "type": "object",
+            "nullable": true,
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "sort": {
+            "type": "string",
+            "nullable": true
+          },
+          "ascending": {
+            "type": "boolean"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isNeedHelp": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ExportAllContactQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllFTLQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllLTLQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllFreightCode": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllCompanyLinkedClient": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllHistoricFreightRates": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllApprovalPending": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllRejectedShipments": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllTenderedShipments": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllApprovedInvoice": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllApprovedRequiredInvoices": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllWeight": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllMiles": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllAccessorial": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportAllTeamMember": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportFTLLanes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExportLTLLanes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "GridResultOfFreightCategory": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/FreightCategory"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "FreightCategory": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              "isDeleted": {
+                "type": "boolean"
+              },
+              "freightCompanyCodes": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FreightCompanyCodes"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FreightCompanyCodes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "shortDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "freightCategory_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              "shortDescription": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              },
+              "defaultPrice": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "isDeleted": {
+                "type": "boolean"
+              },
+              "wgsAccesrails": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/WGSAccesrails"
+                }
+              },
+              "freightInvoiceItems": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FreightInvoiceItems"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "WGSAccesrails": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "freightCode_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "isFixedPrice": {
+                "type": "boolean"
+              },
+              "isDeleted": {
+                "type": "boolean"
+              },
+              "defaultPrice": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "freightCompanyCodes": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/FreightCompanyCodes"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "AuditableEntity": {
+        "type": "object",
+        "x-abstract": true,
+        "additionalProperties": false,
+        "properties": {
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastModifiedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "FreightInvoiceItems": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "freightInvoiceHeader_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "freightCode_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "freightCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "freightDescription": {
+                "type": "string",
+                "nullable": true
+              },
+              "quantity": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "price": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "totalPrice": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "isDeleted": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "GridCategoryQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "Result": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "info": {
+            "type": "boolean"
+          },
+          "succeeded": {
+            "type": "boolean"
+          },
+          "data": {
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "invoiceDetailId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "CreateCategoryCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDeleted": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RemoveCategoryCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "GridResultOfFreightCompany": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/FreightCompany"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "FreightCompany": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "shortName",
+              "tenderEmail"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              "shortName": {
+                "type": "string",
+                "maxLength": 50,
+                "minLength": 1
+              },
+              "phone": {
+                "type": "string",
+                "maxLength": 20,
+                "nullable": true
+              },
+              "fax": {
+                "type": "string",
+                "maxLength": 20,
+                "nullable": true
+              },
+              "tenderEmail": {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              "isActive": {
+                "type": "boolean"
+              },
+              "address": {
+                "type": "string",
+                "nullable": true
+              },
+              "address1": {
+                "type": "string",
+                "nullable": true
+              },
+              "city": {
+                "type": "string",
+                "maxLength": 50,
+                "nullable": true
+              },
+              "state": {
+                "type": "string",
+                "maxLength": 50,
+                "nullable": true
+              },
+              "zipCode": {
+                "type": "string",
+                "maxLength": 20,
+                "nullable": true
+              },
+              "region": {
+                "type": "string",
+                "maxLength": 50,
+                "nullable": true
+              },
+              "country": {
+                "type": "string",
+                "maxLength": 50,
+                "nullable": true
+              },
+              "paymentMethod": {
+                "type": "string",
+                "maxLength": 50,
+                "nullable": true
+              },
+              "paymentTerm": {
+                "type": "string",
+                "maxLength": 50,
+                "nullable": true
+              },
+              "labourCost": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "ftl": {
+                "type": "boolean"
+              },
+              "ltl": {
+                "type": "boolean"
+              },
+              "wgs": {
+                "type": "boolean"
+              },
+              "companyContacts": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/CompanyContact"
+                }
+              },
+              "ftL_Companys": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FTL_Company"
+                }
+              },
+              "ltL_Companys": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/LTL_Company"
+                }
+              },
+              "wgsCompanyWeights": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/WGSCompanyWeights"
+                }
+              },
+              "wgsCompanyMiles": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/WGSCompanyMiles"
+                }
+              },
+              "freightCompanyCodes": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FreightCompanyCodes"
+                }
+              },
+              "wgsAccesrails": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/WGSAccesrails"
+                }
+              },
+              "companyLinkedClients": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/CompanyLinkedClients"
+                }
+              },
+              "companyDocuments": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/CompanyDocuments"
+                }
+              },
+              "routes": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/Route"
+                }
+              },
+              "freightPermissions": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FreightPermissions"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "CompanyContact": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "contactType_Id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "fName": {
+                "type": "string",
+                "maxLength": 100,
+                "nullable": true
+              },
+              "lName": {
+                "type": "string",
+                "maxLength": 100,
+                "nullable": true
+              },
+              "title": {
+                "type": "string",
+                "maxLength": 100,
+                "nullable": true
+              },
+              "mobile": {
+                "type": "string",
+                "maxLength": 20,
+                "nullable": true
+              },
+              "fax": {
+                "type": "string",
+                "maxLength": 20,
+                "nullable": true
+              },
+              "ext": {
+                "type": "string",
+                "maxLength": 20,
+                "nullable": true
+              },
+              "email": {
+                "type": "string",
+                "maxLength": 128,
+                "nullable": true
+              },
+              "notes": {
+                "type": "string",
+                "nullable": true
+              },
+              "isDeleted": {
+                "type": "boolean",
+                "nullable": true
+              },
+              "createdDate": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        ]
+      },
+      "FTL_Company": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "originCity",
+              "destinationCity",
+              "originState",
+              "destinationState"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "originCity": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              "destinationCity": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              "originState": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              "destinationState": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              "price": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "isActive": {
+                "type": "boolean"
+              },
+              "isDeleted": {
+                "type": "boolean"
+              },
+              "truck_Id": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "truck": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/LU_Truck"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "LU_Truck": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "ftL_Companies": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FTL_Company"
+                }
+              },
+              "ltL_Companies": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/LTL_Company"
+                }
+              },
+              "wgS_CompanyMiles": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/WGSCompanyMiles"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "LTL_Company": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "originCity": {
+                "type": "string",
+                "maxLength": 100,
+                "nullable": true
+              },
+              "destinationCity": {
+                "type": "string",
+                "maxLength": 100,
+                "nullable": true
+              },
+              "originState": {
+                "type": "string",
+                "maxLength": 100,
+                "nullable": true
+              },
+              "destinationState": {
+                "type": "string",
+                "maxLength": 100,
+                "nullable": true
+              },
+              "isActive": {
+                "type": "boolean"
+              },
+              "isDeleted": {
+                "type": "boolean"
+              },
+              "pPrice1": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "pPrice2": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "pPrice3": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "pPrice4": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "pPrice5": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "pPrice6": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "pPrice7": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "pPrice8": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "pPrice9": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "pPrice10": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "truck_Id": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "truck": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/LU_Truck"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "WGSCompanyMiles": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "from": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "price": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "to": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "labelValue": {
+                "type": "string",
+                "nullable": true
+              },
+              "isDeleted": {
+                "type": "boolean"
+              },
+              "truck_Id": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "truck": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/LU_Truck"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "WGSCompanyWeights": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "from": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "to": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "labelValue": {
+                "type": "string",
+                "nullable": true
+              },
+              "isDeleted": {
+                "type": "boolean"
+              },
+              "wgsCompanyPrice": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/WGSCompanyPrice"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "WGSCompanyPrice": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "companyWGSWeight_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "companyWGSMiles_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "price": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "isDeleted": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "CompanyLinkedClients": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "clientName"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "clientId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "clientName": {
+                "type": "string",
+                "minLength": 1
+              },
+              "collectionId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "collectionName": {
+                "type": "string",
+                "nullable": true
+              },
+              "scheduleFrequency": {
+                "type": "string",
+                "nullable": true
+              },
+              "isPrimary": {
+                "type": "boolean"
+              },
+              "isSecondary": {
+                "type": "boolean"
+              },
+              "approvalRequired": {
+                "type": "boolean"
+              },
+              "isDeleted": {
+                "type": "boolean"
+              },
+              "transportDays": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "fromTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "toTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "freightType": {
+                "type": "string",
+                "nullable": true
+              },
+              "_FreightCompany": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/FreightCompany"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "CompanyDocuments": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "documentType": {
+                "type": "string",
+                "nullable": true
+              },
+              "documentPath": {
+                "type": "string",
+                "nullable": true
+              },
+              "documentName": {
+                "type": "string",
+                "nullable": true
+              },
+              "isDeleted": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "Route": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "driverName": {
+                "type": "string",
+                "nullable": true
+              },
+              "freightCompanyName": {
+                "type": "string",
+                "nullable": true
+              },
+              "truckNumber": {
+                "type": "string",
+                "nullable": true
+              },
+              "driverID": {
+                "type": "string",
+                "nullable": true
+              },
+              "pickUpDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "pickUpTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "dockDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "dockTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "dockID": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "dock": {
+                "type": "string",
+                "nullable": true
+              },
+              "truckSize": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "isDeleted": {
+                "type": "boolean"
+              },
+              "quote": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "newQuote": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "trailerNumber": {
+                "type": "string",
+                "nullable": true
+              },
+              "sealNumber": {
+                "type": "string",
+                "nullable": true
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "routeShipments": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/RouteShipments"
+                }
+              },
+              "_Company": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/FreightCompany"
+                  }
+                ]
+              },
+              "dockScheduled": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/DockScheduled"
+                }
+              },
+              "freightInvoices": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FreightInvoices"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RouteShipments": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "route_Id": {
+                "type": "integer",
+                "format": "int64",
+                "nullable": true
+              },
+              "shipmentId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "orderId": {
+                "type": "integer",
+                "format": "int64",
+                "nullable": true
+              },
+              "clientReferenceNumber": {
+                "type": "string",
+                "nullable": true
+              },
+              "tendered": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "shipmentStatus": {
+                "type": "string",
+                "nullable": true
+              },
+              "freightType": {
+                "type": "string",
+                "nullable": true
+              },
+              "plannedQty": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "weight": {
+                "type": "number",
+                "format": "decimal",
+                "nullable": true
+              },
+              "statusId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "clientId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "client": {
+                "type": "string",
+                "nullable": true
+              },
+              "collectionPointId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "collectionPoint": {
+                "type": "string",
+                "nullable": true
+              },
+              "collectionPointAddress": {
+                "type": "string",
+                "nullable": true
+              },
+              "collectionPointAddress2": {
+                "type": "string",
+                "nullable": true
+              },
+              "collectionPointCity": {
+                "type": "string",
+                "nullable": true
+              },
+              "collectionPointState": {
+                "type": "string",
+                "nullable": true
+              },
+              "collectionPointZip": {
+                "type": "string",
+                "nullable": true
+              },
+              "siteId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "site": {
+                "type": "string",
+                "nullable": true
+              },
+              "siteName": {
+                "type": "string",
+                "nullable": true
+              },
+              "shipmentProductId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "shipmentProduct": {
+                "type": "string",
+                "nullable": true
+              },
+              "quote": {
+                "type": "string",
+                "maxLength": 250,
+                "minLength": 0,
+                "nullable": true
+              },
+              "internalReferenceID": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "internalNotes": {
+                "type": "string",
+                "nullable": true
+              },
+              "transportDays": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "isAuto": {
+                "type": "boolean"
+              },
+              "isInbound": {
+                "type": "boolean"
+              },
+              "isArrangedByCustomer": {
+                "type": "boolean"
+              },
+              "tenderPendingDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "tenderPendingApprovalDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "rejectShipmentDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "quoteApprovalDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "approvalDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "accountType": {
+                "type": "string",
+                "nullable": true
+              },
+              "isTransfer": {
+                "type": "boolean"
+              },
+              "canTransfer": {
+                "type": "boolean"
+              },
+              "dockID": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "dockName": {
+                "type": "string",
+                "nullable": true
+              },
+              "recevingTypeId": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "receivingTypeName": {
+                "type": "string",
+                "nullable": true
+              },
+              "contactName": {
+                "type": "string",
+                "nullable": true
+              },
+              "contactEmail": {
+                "type": "string",
+                "nullable": true
+              },
+              "contactPhone": {
+                "type": "string",
+                "nullable": true
+              },
+              "crmName": {
+                "type": "string",
+                "nullable": true
+              },
+              "crmEmail": {
+                "type": "string",
+                "nullable": true
+              },
+              "crmPhone": {
+                "type": "string",
+                "nullable": true
+              },
+              "pickUpDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "dockDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "dockTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "orderDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "pickUpTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "isInterCompany": {
+                "type": "boolean"
+              },
+              "interCompanyShipmentId": {
+                "type": "string",
+                "nullable": true
+              },
+              "isVerifyDelivery": {
+                "type": "boolean"
+              },
+              "rejectReason": {
+                "type": "string",
+                "nullable": true
+              },
+              "isNeedsHelp": {
+                "type": "boolean"
+              },
+              "needsHelpNote": {
+                "type": "string",
+                "nullable": true
+              },
+              "notes": {
+                "type": "string",
+                "nullable": true
+              },
+              "transferredDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "routeDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "shipmentAknowledges": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/ShipmentAknowledge"
+                }
+              },
+              "shipmentStatusList": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/ShipmentStatus"
+                }
+              },
+              "avgShipWeight": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "freightCostResponsibilityPercentage": {
+                "type": "number",
+                "format": "decimal"
+              }
+            }
+          }
+        ]
+      },
+      "ShipmentAknowledge": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "routeShipment_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "rejectionToken": {
+                "type": "string",
+                "nullable": true
+              },
+              "confirmToken": {
+                "type": "string",
+                "nullable": true
+              },
+              "isExpired": {
+                "type": "boolean"
+              },
+              "sentEmail": {
+                "type": "string",
+                "nullable": true
+              },
+              "accountType": {
+                "type": "string",
+                "nullable": true
+              },
+              "_RouteShipments": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/RouteShipments"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "ShipmentStatus": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "routeShipment_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "oldStatus": {
+                "type": "string",
+                "nullable": true
+              },
+              "newStatus": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "DockScheduled": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "route_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "dockId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "dock": {
+                "type": "string",
+                "nullable": true
+              },
+              "receivingTypeID": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "siteId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "dockDate": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "dockTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "capacity": {
+                "type": "string",
+                "nullable": true
+              },
+              "site": {
+                "type": "string",
+                "nullable": true
+              },
+              "receivingType": {
+                "type": "string",
+                "nullable": true
+              },
+              "_Route": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Route"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "FreightInvoices": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "route_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "isApproved": {
+                "type": "boolean"
+              },
+              "quote": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "percentage": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "grandTotal": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "approvedDate": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_Route": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Route"
+                  }
+                ]
+              },
+              "freightInvoiceHeaders": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FreightInvoiceHeaders"
+                }
+              },
+              "isDeleted": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "FreightInvoiceHeaders": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "freightInvoice_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "freightCharges": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "invoiceNumber": {
+                "type": "string",
+                "nullable": true
+              },
+              "invoiceName": {
+                "type": "string",
+                "nullable": true
+              },
+              "invoiceDate": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "notes": {
+                "type": "string",
+                "nullable": true
+              },
+              "transportingMiles": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "boiNumber": {
+                "type": "string",
+                "nullable": true
+              },
+              "freightInvoiceItems": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FreightInvoiceItems"
+                }
+              },
+              "isDeleted": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "FreightPermissions": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "company_Id": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "permission_Id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "isActive": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "GridCompanyQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "isActive": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "UpdateCompanyCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "shortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentTerm": {
+            "type": "string",
+            "nullable": true
+          },
+          "ftl": {
+            "type": "boolean"
+          },
+          "ltl": {
+            "type": "boolean"
+          },
+          "wgs": {
+            "type": "boolean"
+          },
+          "tenderEmail": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateCompanyCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "shortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentTerm": {
+            "type": "string",
+            "nullable": true
+          },
+          "ftl": {
+            "type": "boolean"
+          },
+          "ltl": {
+            "type": "boolean"
+          },
+          "wgs": {
+            "type": "boolean"
+          },
+          "tenderEmail": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "FreightCompanyEditDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "shortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentTerm": {
+            "type": "string",
+            "nullable": true
+          },
+          "ftl": {
+            "type": "boolean"
+          },
+          "ltl": {
+            "type": "boolean"
+          },
+          "wgs": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "tenderEmail": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GridResultOfCompanyContactDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CompanyContactDto"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "CompanyContactDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "contactType_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lName": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "mobile": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "ext": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GridCompanyContactQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "CreateCompanyContactCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "contactType_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lName": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "mobile": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "ext": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDeleted": {
+            "type": "boolean",
+            "nullable": true
+          }
+        }
+      },
+      "RemoveContactCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "contactId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "BasicInformationCompanyDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "countries": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LU_Country"
+            }
+          },
+          "states": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LU_State"
+            }
+          },
+          "clientContactTypes": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LU_ClientContactTypes"
+            }
+          },
+          "paymentMethods": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Payment"
+            }
+          },
+          "paymentTerms": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Payment"
+            }
+          },
+          "freightCategories": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/FreightCategory"
+            }
+          },
+          "freightCompanyCodes": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/FreightCompanyCodes"
+            }
+          }
+        }
+      },
+      "LU_Country": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "code": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "LU_State": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "abbr": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "LU_ClientContactTypes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "companyContacts": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/CompanyContact"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "Payment": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GridResultOfFtlDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/FtlDTO"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "FtlDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "originCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "originState": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationState": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "truckSize": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GridFTLQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "CreateFTLCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "originCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "originState": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationState": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "price": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "truck_Id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "RemoveAndDeactiveFTLCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "action": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDeactive": {
+            "type": "boolean"
+          },
+          "isDeleted": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GridResultOfLtlDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LtlDto"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LtlDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "originCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "originState": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationState": {
+            "type": "string",
+            "nullable": true
+          },
+          "pPrice1": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice2": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice3": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice4": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice5": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice6": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice7": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice8": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice9": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice10": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "truckSize": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GridLTLQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "CreateLTLCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "originCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "originState": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationState": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "pPrice1": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice2": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice3": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice4": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice5": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice6": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice7": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice8": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice9": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pPrice10": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "truck_Id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "RemoveAndDeactiveLTLCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "action": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDeactive": {
+            "type": "boolean"
+          },
+          "isDeleted": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GridResultOfWGSMilesDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/WGSMilesDto"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "WGSMilesDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "labelValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "miles": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "to": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "minimumCharge": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "truckSize": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "decimal"
+          }
+        }
+      },
+      "GridWGSMilesQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "CreateWGSMilesCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "price": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "from": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "to": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "labelValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "truck_Id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "GridResultOfWGSCompanyWeights": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/WGSCompanyWeights"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "GridWGSWeightQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "CreateWGSWeightCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "from": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "to": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "labelValue": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GridWGSResultOfWGSCompanyMilesAndWGSCompanyWeightsAndWGSCompanyPrice": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "miles": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/WGSCompanyMiles"
+            }
+          },
+          "weights": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/WGSCompanyWeights"
+            }
+          },
+          "weightPrice": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/WGSCompanyPrice"
+            }
+          }
+        }
+      },
+      "GridWGSQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "UpdateWGSWeightPricesCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "price": {
+            "type": "number",
+            "format": "decimal"
+          }
+        }
+      },
+      "GridResultOfFreightCompanyCodes": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/FreightCompanyCodes"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "GridFreightCodeQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "FreightCodeCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "freightCategory_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "shortDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "defaultPrice": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RemoveFreightCodeCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "freightCodeId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "GridResultOfWGSAccesrailsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/WGSAccesrailsDto"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "WGSAccesrailsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "freightCode_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isFixedPrice": {
+            "type": "boolean"
+          },
+          "defaultPrice": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "freightCode": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GridWGSAccesrailsQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "CreateWGSAccesrailsCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "freightCode_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isFixedPrice": {
+            "type": "boolean"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "defaultPrice": {
+            "type": "number",
+            "format": "decimal"
+          }
+        }
+      },
+      "RemoveWGSAccesrailsCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "GridResultOfCompanyLinkedClients": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CompanyLinkedClients"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "GridLinkedClientsQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "LinkedClientDetailsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientPreferenceDto": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ClientPreferenceDto"
+            }
+          }
+        }
+      },
+      "ClientPreferenceDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GetLinkedClientDetailsQuery": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "clientName": {
+            "type": "string",
+            "nullable": true
+          },
+          "collectionPointId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "collectionPointName": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateLinkedClientsCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clientName": {
+            "type": "string",
+            "nullable": true
+          },
+          "collectionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "collectionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "scheduleFrequency": {
+            "type": "string",
+            "nullable": true
+          },
+          "isPrimary": {
+            "type": "boolean"
+          },
+          "isSecondary": {
+            "type": "boolean"
+          },
+          "approvalRequired": {
+            "type": "boolean"
+          },
+          "transportDays": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fromTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "toTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "freightType": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDeleted": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RemoveLinkedClientCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "linkedId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "InsertLabourQuoteCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "companyId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "labourCost": {
+            "type": "number",
+            "format": "decimal"
+          }
+        }
+      },
+      "GridResultOfCompanyDocuments": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CompanyDocuments"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "GridCompanyDocumentsQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "CompanyDocumentsCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GridResultOfFreightRates": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/FreightRates"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "FreightRates": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "routeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "collectionPoint": {
+            "type": "string",
+            "nullable": true
+          },
+          "site": {
+            "type": "string",
+            "nullable": true
+          },
+          "collectionLocation": {
+            "type": "string",
+            "nullable": true
+          },
+          "collectionLocationToolTip": {
+            "type": "string",
+            "nullable": true
+          },
+          "pickUpDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "scheduledDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "freightCharges": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "quote": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "shipmentType": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GetHistoricFreightRatesQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "LU_Permissions": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "value": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              },
+              "freightPermision": {
+                "type": "boolean"
+              },
+              "isActive": {
+                "type": "boolean"
+              },
+              "freightPermissions": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FreightPermissions"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "AddUpdatePermissionsCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "freightPermissionIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "permissionIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "company_Id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "GridResultOfTeamMemberDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/TeamMemberDto"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "needHelpCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "TeamMemberDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GetAllTeamMemberGridQuery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GridQuery"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "AddUpdateTeamMemberCommand": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TeamMemberDto"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "RemoveTeamMemberCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "OptionVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "receivingTypeID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "AssignShipmentToTeamMemberCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "shipmentId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "teamMemberId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "JWT": {
+        "type": "apiKey",
+        "description": "Type into the textbox: Bearer {your JWT token}.",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "JWT": []
+    }
+  ]
+}

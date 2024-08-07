@@ -1,0 +1,176 @@
+<nav class="sidebar-menu">
+    <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+        aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded"
+        (click)="toggle()"
+    >
+        <svg width="26" height="26" viewBox="0 0 26 26">
+            <path
+                d="M 18.976563 23 L 22 20.984375 L 16.480469 13 L 22 5.015625 L 18.976563 3 L 11.980469 13 Z M 10.960938 23 L 14.019531 20.984375 L 8.5 13 L 14.019531 5.015625 L 10.960938 3 L 4 13 Z"
+            ></path>
+        </svg>
+    </button>
+
+    <ul class="sidebar-menu__links">
+        <ng-container *ngFor="let menuItem of menu">
+            <li
+                class="menu-item"
+                *ngIf="admin || permissions.indexOf(menuItem.name) != -1"
+            >
+                <ng-container
+                    *ngIf="!!menuItem.subMenus && menuItem.name != 'Logistics'"
+                >
+                    <a
+                        class="menu-link"
+                        (click)="
+                            expansion =
+                                expansion != menuItem.name ? menuItem.name : ''
+                        "
+                        title="{{ menuItem.title }}"
+                    >
+                        <ng-container
+                            *ngTemplateOutlet="
+                                iconTemplate;
+                                context: { icon: menuItem.name }
+                            "
+                        ></ng-container>
+                        <span>{{ menuItem.text }}</span>
+                    </a>
+
+                    <ul
+                        class="sidebar-menu__links submenu collapse"
+                        [ngClass]="{ show: expansion == menuItem.name }"
+                    >
+                        <ng-container
+                            *ngFor="let subMenuItem of menuItem.subMenus"
+                        >
+                            <li
+                                class="menu-item"
+                                *ngIf="
+                                    admin ||
+                                    permissions.indexOf(subMenuItem.name) != -1
+                                "
+                            >
+                                <a
+                                    class="menu-link"
+                                    href="{{ baseUrl }}{{ subMenuItem.path }}"
+                                    title="{{ subMenuItem.title }}"
+                                >
+                                    <span>{{ subMenuItem.text }}</span>
+                                </a>
+                            </li>
+                        </ng-container>
+                    </ul>
+                </ng-container>
+                <ng-container
+                    *ngIf="!menuItem.subMenus && menuItem.name != 'Logistics'"
+                >
+                    <a
+                        class="menu-link"
+                        href="{{ baseUrl }}{{ menuItem.path }}"
+                        title="{{ menuItem.title }}"
+                    >
+                        <ng-container
+                            *ngTemplateOutlet="
+                                iconTemplate;
+                                context: { icon: menuItem.name }
+                            "
+                        ></ng-container>
+                        <span>{{ menuItem.text }}</span>
+                    </a>
+                </ng-container>
+                <ng-container *ngIf="menuItem.name == 'Logistics'">
+                    <a class="menu-link">
+                        <svg
+                            class="svg-icon--home"
+                            viewBox="0 0 32 32"
+                            width="32px"
+                            height="32px"
+                        >
+                            <path
+                                d="M 4 4 L 4 16 L 5 16 L 5 28 L 15 28 L 15 21 L 17 21 L 17 28 L 27 28 L 27 16 L 28 16 L 28 4 Z M 6 6 L 26 6 L 26 14 L 21.4375 14 L 16.71875 9.28125 L 16 8.59375 L 15.28125 9.28125 L 10.5625 14 L 6 14 Z M 16 11.4375 L 20.28125 15.71875 L 20.59375 16 L 25 16 L 25 26 L 19 26 L 19 19 L 13 19 L 13 26 L 7 26 L 7 16 L 11.40625 16 L 11.71875 15.71875 Z M 9 19 L 9 23 L 11 23 L 11 19 Z M 21 19 L 21 23 L 23 23 L 23 19 Z"
+                            />
+                        </svg>
+                        <span>Logistics</span>
+                    </a>
+                    <ul class="sidebar-menu__links submenu collapse show">
+                      
+                        <li class="menu-item" [routerLinkActive]="['active']">
+                            <a
+                                class="menu-link"
+                                [routerLink]="['/freight-company']"
+                            >
+                                <span>Freight Companies</span>
+                            </a>
+                        </li>
+                        <li class="menu-item" [routerLinkActive]="['active']">
+                            <a
+                                class="menu-link"
+                                [routerLink]="['/freight-category']"
+                            >
+                                <span>Freight Category</span>
+                            </a>
+                        </li>
+                      
+                       
+                        <li class="menu-item" [routerLinkActive]="['active']">
+                            <a
+                                class="menu-link"
+                                [routerLink]="['/team-members']"
+                            >
+                                <span>Team Members</span>
+                            </a>
+                        </li>
+                    </ul>
+                </ng-container>
+            </li>
+        </ng-container>
+    </ul>
+</nav>
+
+<ng-template #iconTemplate let-icon="icon">
+    <ng-container [ngSwitch]="icon">
+        <ng-container *ngSwitchCase="'AssetMgmnt'">
+            <img
+                class="icon"
+                src="https://tracktechdevelopment.blob.core.windows.net/static-content/tracktech/css/images/navigation-icons/set-two/nav-am.png"
+            />
+        </ng-container>
+        <ng-container *ngSwitchCase="'HarvestMgmnt'">
+            <img
+                class="icon"
+                src="https://tracktechdevelopment.blob.core.windows.net/static-content/tracktech/css/images/navigation-icons/set-two/nav-harvest.png"
+            />
+        </ng-container>
+        <ng-container *ngSwitchCase="'OEM'">
+            <img
+                class="icon"
+                src="https://tracktechdevelopment.blob.core.windows.net/static-content/tracktech/css/images/navigation-icons/set-two/nav-oem.png"
+            />
+        </ng-container>
+        <ng-container *ngSwitchCase="'Admin'">
+            <img
+                class="icon"
+                src="https://tracktechdevelopment.blob.core.windows.net/static-content/tracktech/css/images/navigation-icons/set-two/nav-system-admin.png"
+            />
+        </ng-container>
+        <ng-container *ngSwitchCase="'Logs'">
+            <img
+                class="icon"
+                src="https://tracktechdevelopment.blob.core.windows.net/static-content/tracktech/css/images/navigation-icons/set-two/nav-system-logs3.png"
+            />
+        </ng-container>
+        <ng-container *ngSwitchCase="'ProductCatalog'"></ng-container>
+        <ng-container *ngSwitchDefault>
+            <img
+                class="icon"
+                src="https://tracktechdevelopment.blob.core.windows.net/static-content/tracktech/css/images/navigation-icons/set-two/nav{{
+                    kebabCase(icon)
+                }}.png"
+            />
+        </ng-container>
+    </ng-container>
+</ng-template>

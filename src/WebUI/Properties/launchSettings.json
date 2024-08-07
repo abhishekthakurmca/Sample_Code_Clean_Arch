@@ -1,0 +1,28 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:61846",
+      "sslPort": 44312
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+        "AzureCloudStorage": "DefaultEndpointsProtocol=https;AccountName=tracktechdevelopment;AccountKey=XCvH8cS0a962uMnzmTmAumZ88f/NRnB1iUfU+YOWZD7mLwBNioOJFXRGhxa4/NTkGxIbP3pCCdIvoq5/N6ydbg==;EndpointSuffix=core.windows.net"
+      }
+    },
+    "Anubis.WebUI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    }
+  }
+}

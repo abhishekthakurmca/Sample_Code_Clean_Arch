@@ -1,0 +1,51 @@
+.header-account-menu {
+    padding-right: 10px;
+    padding-top: 3px;
+    font-size: 1.2rem;
+
+    .icon {
+        margin: 0 2px;
+    }
+
+    a {
+        display: inline-block;
+        padding: 2px 4px;
+    }
+
+    svg {
+        fill: #404040;
+    }
+
+    a.logout:hover svg, a.logout:focus svg {
+        fill: #d9534f;
+    }
+
+    a.api:hover svg, a.api:focus svg {
+        fill: #24a249;
+    }
+}
+
+.account-menu__user {
+    padding-right: 6px;
+}
+
+.account-menu__bottom-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        position: relative;
+    }
+}
+
+.account-menu-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.account-menu__top {
+    line-height: 1.2;
+}

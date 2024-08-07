@@ -1,0 +1,269 @@
+<div *ngIf="!freightcodedetails">
+    <em>Loading...</em>
+</div>
+
+<div class="page-header-actions">
+    <button
+        class="btn btn-primary"
+        data-backdrop="static"
+        data-keyboard="false"
+        (click)="showAddModal(codeAddModal, '', '')"
+    >
+        Add Freight Code
+    </button>
+</div>
+
+<app-table
+    *ngIf="freightcodedetails"
+    [columns]="{
+        id: 'Id #',
+        name: 'Name',
+        shortDescription: 'Short Description',
+        defaultPrice: 'Default Price'
+    }"
+    [templates]="{
+        defaultPrice: DefaultPrice
+    }"
+    [sort]="init.sort"
+    [data]="freightcodedetails.data"
+    [total]="freightcodedetails.total"
+    [loading]="loading"
+    (gridEvent)="gridUpdate($event)"
+    [rowTemplate]="rowTemplate"
+>
+    <div class="tools">
+        <button (click)="export()">
+            <svg class="icon--excel" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                    d="M 11.033203 3.2207031 C 10.958186 3.2183086 10.882062 3.2229062 10.804688 3.2382812 L 2.8046875 4.8398438 C 2.3366875 4.9338437 2 5.3433125 2 5.8203125 L 2 18.179688 C 2 18.656688 2.3366875 19.066156 2.8046875 19.160156 L 10.804688 20.761719 C 11.423687 20.885719 12 20.410297 12 19.779297 L 12 4.2207031 C 12 3.6685781 11.558326 3.2374648 11.033203 3.2207031 z M 14 5 L 14 7 L 16 7 L 16 9 L 14 9 L 14 11 L 16 11 L 16 13 L 14 13 L 14 15 L 16 15 L 16 17 L 14 17 L 14 19 L 21 19 C 21.552 19 22 18.552 22 18 L 22 6 C 22 5.448 21.552 5 21 5 L 14 5 z M 18 7 L 20 7 L 20 9 L 18 9 L 18 7 z M 5.4375 8.296875 C 5.7495 8.296875 6.0323438 8.4854375 6.1523438 8.7734375 L 6.8769531 10.511719 C 6.9519531 10.692719 7.0084063 10.902625 7.0664062 11.140625 L 7.0917969 11.140625 C 7.1247969 10.997625 7.1919688 10.779141 7.2929688 10.494141 L 8.1328125 8.703125 C 8.2488125 8.455125 8.4974844 8.296875 8.7714844 8.296875 C 9.3034844 8.296875 9.6444844 8.8620312 9.3964844 9.3320312 L 8.0078125 11.966797 L 9.4140625 14.599609 C 9.6780625 15.099609 9.3179531 15.703125 8.7519531 15.703125 C 8.4599531 15.703125 8.1923125 15.533578 8.0703125 15.267578 L 7.1582031 13.287109 C 7.1162031 13.202109 7.0663906 13.032922 7.0253906 12.794922 L 7.0097656 12.794922 C 6.9847656 12.908922 6.934375 13.079594 6.859375 13.308594 L 5.9277344 15.296875 C 5.8117344 15.544875 5.5611094 15.703125 5.2871094 15.703125 L 5.2011719 15.703125 C 4.6621719 15.703125 4.3210312 15.123344 4.5820312 14.652344 L 6.0605469 11.994141 L 4.7480469 9.421875 C 4.4860469 8.906875 4.8595 8.296875 5.4375 8.296875 z M 18 11 L 20 11 L 20 13 L 18 13 L 18 11 z M 18 15 L 20 15 L 20 17 L 18 17 L 18 15 z"
+                ></path>
+            </svg>
+            Export
+        </button>
+    </div>
+</app-table>
+
+<ng-template #DefaultPrice let-lot="row">
+    {{ lot.defaultPrice | currency: "USD":"symbol":"1.2-2" }}
+</ng-template>
+
+<ng-template #packageTemplate let-lot="row">
+    <ng-container *ngIf="lot.unique.length">
+        {{ lot.containers.length }}
+        <ng-container *ngIf="lot.unique.length == 1"
+            >{{ lot.unique[0] }}(s)</ng-container
+        >
+        <ng-container *ngIf="lot.unique.length > 1">Mixed</ng-container>
+    </ng-container>
+    <ng-container *ngIf="!lot.unique.length"> None </ng-container>
+</ng-template>
+
+<ng-template #rowTemplate let-lot="row">
+    <button (click)="showAddModal(codeAddModal, lot.id, lot)">
+        <svg class="icon--edit" width="24" height="24" viewBox="0 0 24 24">
+            <path
+                d="M 19.171875 2 C 18.448125 2 17.724375 2.275625 17.171875 2.828125 L 16 4 L 20 8 L 21.171875 6.828125 C 22.275875 5.724125 22.275875 3.933125 21.171875 2.828125 C 20.619375 2.275625 19.895625 2 19.171875 2 z M 14.5 5.5 L 3 17 L 3 21 L 7 21 L 18.5 9.5 L 14.5 5.5 z"
+            ></path>
+        </svg>
+    </button>
+    <button (click)="showDeleteModel(deleteModel, lot.id)">
+        <svg class="icon--trash" width="24" height="24" viewBox="0 0 24 24">
+            <path
+                d="M 10 2 L 9 3 L 5 3 C 4.4 3 4 3.4 4 4 C 4 4.6 4.4 5 5 5 L 7 5 L 17 5 L 19 5 C 19.6 5 20 4.6 20 4 C 20 3.4 19.6 3 19 3 L 15 3 L 14 2 L 10 2 z M 5 7 L 5 20 C 5 21.1 5.9 22 7 22 L 17 22 C 18.1 22 19 21.1 19 20 L 19 7 L 5 7 z M 9 9 C 9.6 9 10 9.4 10 10 L 10 19 C 10 19.6 9.6 20 9 20 C 8.4 20 8 19.6 8 19 L 8 10 C 8 9.4 8.4 9 9 9 z M 15 9 C 15.6 9 16 9.4 16 10 L 16 19 C 16 19.6 15.6 20 15 20 C 14.4 20 14 19.6 14 19 L 14 10 C 14 9.4 14.4 9 15 9 z"
+            ></path>
+        </svg>
+    </button>
+</ng-template>
+
+<ng-template #codeAddModal>
+    <div class="modal-header">
+        <h4 class="modal-title" *ngIf="editid == ''">Add Freight Code</h4>
+        <h4 class="modal-title" *ngIf="editid != ''">Edit Freight-Code</h4>
+        <button class="close" aria-label="Close" (click)="hideAddModel()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form class="mt30" [formGroup]="codeform">
+            <div class="form-group">
+                <label>Name <span>*</span></label>
+                <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Name"
+                    formControlName="name"
+                    [ngClass]="{ 'is-invalid': submitted && form.name.errors }"
+                />
+                <div
+                    *ngIf="
+                        (form.name.dirty || form.name.touched || submitted) &&
+                        form.name.errors
+                    "
+                    class="invalid-feedback"
+                >
+                    <div *ngIf="form.name.errors.required">
+                        Name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Short Description <span>*</span></label>
+                <textarea
+                    class="form-control"
+                    rows="3"
+                    cols="50"
+                    placeholder="Short Description"
+                    formControlName="shortdescription"
+                    [ngClass]="{
+                        'is-invalid': submitted && form.shortdescription.errors
+                    }"
+                ></textarea>
+                <div
+                    *ngIf="
+                        (form.shortdescription.dirty ||
+                            form.shortdescription.touched ||
+                            submitted) &&
+                        form.shortdescription.errors
+                    "
+                    class="invalid-feedback"
+                >
+                    <div *ngIf="form.shortdescription.errors.required">
+                        Short Description is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Description <span>*</span></label>
+                <textarea
+                    class="form-control"
+                    rows="3"
+                    cols="50"
+                    placeholder="Description"
+                    formControlName="description"
+                    [ngClass]="{
+                        'is-invalid': submitted && form.description.errors
+                    }"
+                ></textarea>
+                <div
+                    *ngIf="
+                        (form.description.dirty ||
+                            form.description.touched ||
+                            submitted) &&
+                        form.description.errors
+                    "
+                    class="invalid-feedback"
+                >
+                    <div *ngIf="form.description.errors.required">
+                        Description is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Freight Category <span>*</span></label>
+                <select
+                    class="custom-select"
+                    formControlName="freightCategory_Id"
+                    [ngClass]="{
+                        'is-invalid':
+                            submitted && form.freightCategory_Id.errors
+                    }"
+                >
+                    <option value="0" disabled>Select Here</option>
+                    <option
+                        *ngFor="let freightcategory of freightCategorys"
+                        value="{{ freightcategory.id }}"
+                    >
+                        {{ freightcategory.name }}
+                    </option>
+                </select>
+                <div
+                    *ngIf="
+                        (form.freightCategory_Id.dirty ||
+                            form.freightCategory_Id.touched ||
+                            submitted) &&
+                        form.freightCategory_Id.errors
+                    "
+                    class="invalid-feedback"
+                >
+                    <div
+                        *ngIf="
+                            form.freightCategory_Id.errors.required ||
+                            form.freightCategory_Id.errors.min
+                        "
+                    >
+                        Freight Category is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Default Price <span>*</span></label>
+                <input
+                    class="form-control"
+                    type="number"
+                    placeholder="Default Price"
+                    formControlName="defaultprice"
+                    [ngClass]="{
+                        'is-invalid': submitted && form.defaultprice.errors
+                    }"
+                    onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
+                />
+                <div
+                    *ngIf="
+                        (form.defaultprice.dirty ||
+                            form.defaultprice.touched ||
+                            submitted) &&
+                        form.defaultprice.errors
+                    "
+                    class="invalid-feedback"
+                >
+                    <div *ngIf="form.defaultprice.errors.required">
+                        Default Price is required.
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <div class="text-right">
+            <button class="btn btn-default" (click)="hideAddModel()">
+                Cancel
+            </button>
+            <button
+                class="btn btn-primary"
+                (click)="addFreightCode()"
+                *ngIf="editid == ''"
+            >
+                Save
+            </button>
+            <button
+                class="btn btn-primary"
+                (click)="updateFreightCode()"
+                *ngIf="editid != ''"
+            >
+                Update
+            </button>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #deleteModel>
+    <div class="modal-header">
+        <h3>Are you sure you want to delete this Freight Code?</h3>
+        <button type="button" class="close" (click)="hideDeleteModel()">
+            &times;
+        </button>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-default btn-md" (click)="hideDeleteModel()">
+            No
+        </button>
+        <button class="btn btn-danger btn-md" (click)="deletefreightcode()">
+            Yes
+        </button>
+    </div>
+</ng-template>

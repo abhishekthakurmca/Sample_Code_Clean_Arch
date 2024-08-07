@@ -1,0 +1,19 @@
+<ul class="header-links" *ngIf="isAuthenticated | async">
+    <li>
+        <a class="action--profile" [routerLink]='["/authentication/profile"]' title="Manage">{{ userName | async }}</a>
+    </li>
+    <li>
+        <a class="action--logout" [routerLink]='["/authentication/logout"]' [state]='{ local: true }' title="Logout">
+            <i class="fa fa-sign-out"></i> <span class="sr-only">Logout</span>
+        </a>
+    </li>
+</ul>
+
+<ul class="header-links" *ngIf="!(isAuthenticated | async)">
+    <li>
+        <a class="action--register" [routerLink]='["/authentication/register"]'>Register</a>
+    </li>
+    <li>
+        <a class="action--login" [routerLink]='["/authentication/login"]'>Login</a>
+    </li>
+</ul>

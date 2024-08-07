@@ -1,0 +1,505 @@
+<div class="card">
+    <div class="card-header">Company Details</div>
+    <div class="card-body">
+        <form class="mt30" [formGroup]="companyform">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <span
+                            title="The Name of the client will be used on all client reports."
+                        >
+                            <label>Name <span class="text-red">*</span></label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Name"
+                                formControlName="name"
+                                [ngClass]="{
+                                    'is-invalid': submitted && form.name.errors
+                                }"
+                            />
+                        </span>
+                        <div
+                            *ngIf="
+                                (form.name.dirty ||
+                                    form.name.touched ||
+                                    submitted) &&
+                                form.name.errors
+                            "
+                            class="invalid-feedback"
+                        >
+                            <div *ngIf="form.name.errors.required">
+                                Name is required.
+                            </div>
+                            <div *ngIf="form.name.errors.maxlength">
+                                Maximum of 100 characters are allowed.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ShortName <span class="text-red">*</span></label>
+                        <input
+                            title="The short name of the client."
+                            type="text"
+                            class="form-control"
+                            placeholder="Short Name"
+                            formControlName="shortname"
+                            [ngClass]="{
+                                'is-invalid': submitted && form.shortname.errors
+                            }"
+                        />
+                        <div
+                            *ngIf="
+                                (form.shortname.dirty ||
+                                    form.shortname.touched ||
+                                    submitted) &&
+                                form.shortname.errors
+                            "
+                            class="invalid-feedback"
+                        >
+                            <div *ngIf="form.shortname.errors.required">
+                                Short Name is required.
+                            </div>
+                            <div *ngIf="form.shortname.errors.maxlength">
+                                Maximum of 50 characters are allowed.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <span
+                            title="This is the 'Front Desk' phone for the current client. Do not use this to list a phone number to reach a specific individual, that should be stored in the 'Contacts' section."
+                        >
+                            <label>Phone</label>
+                            <input
+                                type="text"
+                                PhoneFaxMask
+                                class="form-control"
+                                placeholder="Phone"
+                                formControlName="phone"
+                                [ngClass]="{
+                                    'is-invalid': submitted && form.phone.errors
+                                }"
+                            />
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label
+                            >Tender Email <span class="text-red">*</span></label
+                        >
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Tender Email"
+                            formControlName="tenderemail"
+                            [ngClass]="{
+                                'is-invalid':
+                                    submitted && form.tenderemail.errors
+                            }"
+                        />
+                        <div
+                            *ngIf="
+                                (form.tenderemail.dirty ||
+                                    form.tenderemail.touched ||
+                                    submitted) &&
+                                form.tenderemail.errors
+                            "
+                            class="invalid-feedback"
+                        >
+                            <div *ngIf="form.tenderemail.errors.required">
+                                Tender Email is required.
+                            </div>
+                            <div
+                                *ngIf="
+                                    form.tenderemail.errors.email ||
+                                    form.tenderemail.errors.pattern
+                                "
+                            >
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fax</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Fax"
+                            formControlName="fax"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Address <span class="text-red">*</span></label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            title="This is the Billing Address for the current client. This address will be used on invoices and any other billing specific reports."
+                            placeholder="Address"
+                            formControlName="address"
+                            [ngClass]="{
+                                'is-invalid': submitted && form.address.errors
+                            }"
+                        />
+                        <div
+                            *ngIf="
+                                (form.address.dirty ||
+                                    form.address.touched ||
+                                    submitted) &&
+                                form.address.errors
+                            "
+                            class="invalid-feedback"
+                        >
+                            <div *ngIf="form.address.errors.required">
+                                Address is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Address 2</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Address 2"
+                            formControlName="address2"
+                            [ngClass]="{
+                                'is-invalid': submitted && form.address2.errors
+                            }"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label>City <span class="text-red">*</span></label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="City"
+                            formControlName="city"
+                            [ngClass]="{
+                                'is-invalid': submitted && form.city.errors
+                            }"
+                        />
+                        <div
+                            *ngIf="
+                                (form.city.dirty ||
+                                    form.city.touched ||
+                                    submitted) &&
+                                form.city.errors
+                            "
+                            class="invalid-feedback"
+                        >
+                            <div *ngIf="form.city.errors.required">
+                                City is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>State <span class="text-red">*</span></label>
+                        <ng-container>
+                            <select
+                                class="custom-select"
+                                formControlName="state"
+                                [ngClass]="{
+                                    'is-invalid': submitted && form.state.errors
+                                }"
+                            >
+                                <option disabled value="0">Select Here</option>
+                                <option
+                                    *ngFor="let state of states"
+                                    value="{{ state.id }}"
+                                >
+                                    {{ state.name }}
+                                </option>
+                            </select>
+                        </ng-container>
+                        <div
+                            *ngIf="
+                                (form.state.dirty ||
+                                    form.state.touched ||
+                                    submitted) &&
+                                form.state.errors
+                            "
+                            class="invalid-feedback"
+                        >
+                            <div
+                                *ngIf="
+                                    form.state.errors.required ||
+                                    form.state.errors.min
+                                "
+                            >
+                                State is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Zip <span class="text-red">*</span></label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Zip"
+                            formControlName="zip"
+                            [ngClass]="{
+                                'is-invalid': submitted && form.zip.errors
+                            }"
+                        />
+                        <div
+                            *ngIf="
+                                (form.zip.dirty ||
+                                    form.zip.touched ||
+                                    submitted) &&
+                                form.zip.errors
+                            "
+                            class="invalid-feedback"
+                        >
+                            <div *ngIf="form.zip.errors.required">
+                                Zip is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Region <span class="text-red">*</span></label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Region"
+                            formControlName="region"
+                            [ngClass]="{
+                                'is-invalid': submitted && form.region.errors
+                            }"
+                        />
+                        <div
+                            *ngIf="
+                                (form.region.dirty ||
+                                    form.region.touched ||
+                                    submitted) &&
+                                form.region.errors
+                            "
+                            class="invalid-feedback"
+                        >
+                            <div *ngIf="form.region.errors.required">
+                                Region is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Country <span class="text-red">*</span></label>
+                        <ng-container>
+                            <select
+                                class="custom-select"
+                                formControlName="country"
+                                [ngClass]="{
+                                    'is-invalid':
+                                        submitted && form.country.errors
+                                }"
+                            >
+                                <option disabled value="0">Select Here</option>
+                                <option
+                                    *ngFor="let country of countrys"
+                                    value="{{ country.id }}"
+                                >
+                                    {{ country.name }}
+                                </option>
+                            </select>
+                        </ng-container>
+                        <div
+                            *ngIf="
+                                (form.country.dirty ||
+                                    form.country.touched ||
+                                    submitted) &&
+                                form.country.errors
+                            "
+                            class="invalid-feedback"
+                        >
+                            <div
+                                *ngIf="
+                                    form.country.errors.required ||
+                                    form.country.errors.min
+                                "
+                            >
+                                Country is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label
+                            >Pay Method <span class="text-red">*</span></label
+                        >
+                        <ng-container>
+                            <select
+                                class="custom-select"
+                                [ngClass]="{
+                                    'is-invalid':
+                                        submitted && form.payment.errors
+                                }"
+                                formControlName="payment"
+                            >
+                                <option value="-1" disabled>Select Here</option>
+                                <option
+                                    *ngFor="let paymentMethod of paymentMethods"
+                                    value="{{ paymentMethod.id }}"
+                                >
+                                    {{ paymentMethod.name }}
+                                </option>
+                            </select>
+                        </ng-container>
+                        <div
+                            *ngIf="
+                                (form.payment.dirty ||
+                                    form.payment.touched ||
+                                    submitted) &&
+                                form.payment.errors
+                            "
+                            class="invalid-feedback"
+                        >
+                            <div
+                                *ngIf="
+                                    form.payment.errors.required ||
+                                    form.payment.errors.min
+                                "
+                            >
+                                Pay Method is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pay Term <span class="text-red">*</span></label>
+                        <ng-container>
+                            <select
+                                class="custom-select"
+                                [ngClass]="{
+                                    'is-invalid':
+                                        submitted && form.paymentterm.errors
+                                }"
+                                formControlName="paymentterm"
+                            >
+                                <option value="-1" disabled>Select Here</option>
+                                <option
+                                    *ngFor="let paymentTerm of paymentTerms"
+                                    value="{{ paymentTerm.id }}"
+                                >
+                                    {{ paymentTerm.name }}
+                                </option>
+                            </select>
+                        </ng-container>
+                        <div
+                            *ngIf="
+                                (form.paymentterm.dirty ||
+                                    form.paymentterm.touched ||
+                                    submitted) &&
+                                form.paymentterm.errors
+                            "
+                            class="invalid-feedback"
+                        >
+                            <div
+                                *ngIf="
+                                    form.paymentterm.errors.required ||
+                                    form.paymentterm.errors.min
+                                "
+                            >
+                                Pay Term is required
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input
+                                type="checkbox"
+                                class="custom-control-input"
+                                formControlName="isactive"
+                                id="isactive"
+                            />
+                            <label class="custom-control-label" for="isactive"
+                                >Is Active</label
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input
+                                type="checkbox"
+                                class="custom-control-input"
+                                formControlName="ftl"
+                                id="ftl"
+                            />
+                            <label class="custom-control-label" for="ftl"
+                                >FTL</label
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input
+                                type="checkbox"
+                                class="custom-control-input"
+                                formControlName="ltl"
+                                id="ltl"
+                            />
+                            <label class="custom-control-label" for="ltl"
+                                >LTL</label
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input
+                                type="checkbox"
+                                class="custom-control-input"
+                                formControlName="wgs"
+                                id="wgs"
+                            />
+                            <label class="custom-control-label" for="wgs"
+                                >WGS</label
+                            >
+                        </div>
+                    </div>
+                    <!--<div
+                        class="form-group"
+                        *ngFor="let item of shipmentFreightTypes"
+                    >
+                        <div class="custom-control custom-checkbox">
+                            <input
+                                type="checkbox"
+                                [checked]="item.isSelected"
+                                (change)="selectShipment(item.id)"
+                                class="custom-control-input"
+                                id="{{ item.id }}"
+                            />
+                            <label
+                                for="{{ item.id }}"
+                                class="custom-control-label"
+                            >
+                                {{ item.name }}
+                            </label>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                    <a
+                        class="btn btn-default"
+                        [routerLink]="['/freight-company']"
+                        >Cancel</a
+                    >
+                    <button class="btn btn-primary" (click)="updateCompany()">
+                        Update
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

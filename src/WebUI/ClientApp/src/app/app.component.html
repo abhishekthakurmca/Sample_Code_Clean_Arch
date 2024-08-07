@@ -1,0 +1,18 @@
+<!-- *** Lodder Section *** -->
+<app-lodder></app-lodder>
+<!-- *** -->
+
+<app-nav-menu *ngIf="!isSmartPage"></app-nav-menu>
+<app-sidebar-menu *ngIf="!isSmartPage"></app-sidebar-menu>
+<main class="main-content" *ngIf="!isSmartPage">
+    <div class="container-fluid">
+        <app-common-nav-bar class="app-common-nav-bar"></app-common-nav-bar>
+        <router-outlet></router-outlet>
+    </div>
+</main>
+
+<div *ngIf="isSmartPage">
+    <div class="container-fluid">
+        <router-outlet></router-outlet>
+    </div>
+</div>

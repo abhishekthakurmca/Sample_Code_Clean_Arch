@@ -1,0 +1,21 @@
+<button class="btn btn-default" (click)="show(modalTemplate)">{{ actionVerb }}</button>
+<ng-template #modalTemplate>
+    <div class="modal-header clearfix">
+        <h4 class="modal-title float-left">
+            {{ title }}
+        </h4>
+        <button type="button" class="close float-right" aria-label="Close" (click)="cancel()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <app-error-alert></app-error-alert>
+        <ng-content select="[message]"></ng-content>
+    </div>
+    <div class="modal-footer">
+        <div class="text-right">
+            <button class="btn btn-default" (click)="cancel()">{{ cancelVerb }}</button>
+            <button class="btn btn-info" (click)="confirm()">{{ confirmVerb }}</button>
+        </div>
+    </div>
+</ng-template>

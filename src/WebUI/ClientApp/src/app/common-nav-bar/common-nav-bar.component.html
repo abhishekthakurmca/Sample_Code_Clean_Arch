@@ -1,0 +1,86 @@
+<div *ngIf="queryPrams != ''">
+    <nav class="nav nav-tabs nav-fill">
+        <a
+            class="nav-item nav-link"
+            routerLinkActive="active"
+            routerLink="/edit-company"
+            [queryParams]="{ id: queryPrams }"
+        >
+            Basic info
+        </a>
+        <a
+            class="nav-item nav-link"
+            routerLinkActive="active"
+            routerLink="/contact"
+            [queryParams]="{ id: queryPrams }"
+        >
+            Contact
+        </a>
+        <a
+            class="nav-item nav-link"
+            routerLinkActive="active"
+            routerLink="/ftl"
+            [queryParams]="{ id: queryPrams }"
+        >
+            FTL
+        </a>
+        <a
+            class="nav-item nav-link"
+            routerLinkActive="active"
+            routerLink="/ltl"
+            [queryParams]="{ id: queryPrams }"
+        >
+            LTL
+        </a>
+        <a
+            class="nav-item nav-link"
+            routerLinkActive="active"
+            routerLink="/freight-code"
+            [queryParams]="{ id: queryPrams }"
+        >
+            Freight Code
+        </a>
+        <a
+            class="nav-item nav-link"
+            routerLinkActive="active"
+            routerLink="/white-glove"
+            [queryParams]="{ id: queryPrams }"
+        >
+            White Glove
+        </a>
+        <a
+            class="nav-item nav-link"
+            routerLinkActive="active"
+            routerLink="/linked-clients"
+            [queryParams]="{ id: queryPrams }"
+        >
+            Linked Clients
+        </a>
+
+        <a
+            class="nav-item nav-link"
+            routerLinkActive="active"
+            routerLink="/file-upload-form"
+            [queryParams]="{ id: queryPrams }"
+        >
+            File Upload
+        </a>
+
+        <a
+            class="nav-item nav-link"
+            routerLinkActive="active"
+            routerLink="/historic-freight"
+            [queryParams]="{ id: queryPrams }"
+        >
+            Historic Freight Rates
+        </a>
+        <a
+            class="nav-item nav-link"
+            routerLinkActive="active"
+            routerLink="/permissions"
+            [queryParams]="{ id: queryPrams }"
+        >
+            Permissions
+        </a>
+    </nav>
+</div>

@@ -1,0 +1,27 @@
+<div class="card" *ngIf="totalPermissions?.length > 0">
+    <div class="card-header">Permissions</div>
+    <div class="card-body">
+        <form class="mt30" [formGroup]="permissionform">
+            <div class="form-group" *ngFor="let group of this.formArray.controls as any; let i = index">
+                <div class="custom-control custom-checkbox">
+                    <label formArrayName="permissionArray"
+                        >
+                        <input type="checkbox" [formControlName]="i">
+                        {{totalPermissions[i].value}}
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+                <a class="btn btn-default" [routerLink]="['/freight-company']">Cancel</a>
+                <button class="btn btn-primary" (click)="updatePermissions()">
+                    Update
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

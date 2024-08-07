@@ -1,0 +1,58 @@
+.btn.btn-link {
+  text-align: right;
+  font-size: 24px;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  cursor: pointer;
+  color: rgb(185, 174, 174);
+}
+table tr th .btn {
+  line-height: inherit !important;
+  padding: 0px 5px !important;
+}
+
+  table tr th .btn i {
+    font-size: 20px !important;
+  }
+
+.break {
+    white-space: pre-line;
+}
+
+.table.table-striped td .fa.fa-question {
+  display: none;
+}
+
+.table.table-striped td {
+  position: relative;
+}
+
+.table.table-striped .inbound-row td:first-child .fa-question {
+  display: block;
+  position: absolute;
+  top: 6px;
+  right: 80px;
+  font-size: 20px;
+  border-radius: 50%;
+  background: #fff;
+  width: 20px;
+  text-align: center;
+  color: #f00;
+  cursor: pointer;
+}
+.notes-text {
+  word-wrap: break-word;
+}
+.inbound-row td:first-child .column_flex{
+  display: flex;
+  gap:10px;
+}
+.inbound-row td:first-child .Icon_relative .question_icon{
+  position: relative!important;
+  right: inherit!important;
+  top: inherit!important;
+  height: 20px!important;
+}
+.inbound-row td:first-child .column_flex span{
+  flex:1;
+}

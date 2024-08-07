@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Anubis.Infrastructure</RootNamespace>
+    <AssemblyName>Anubis.Infrastructure</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200716062900_Tables_WGS_Freight_Codes_.cs" />
+    <Compile Remove="Migrations\20200716062900_Tables_WGS_Freight_Codes_.Designer.cs" />
+    <Compile Remove="Migrations\20200716064111_Tables_WGS_Freight_Code.cs" />
+    <Compile Remove="Migrations\20200716064111_Tables_WGS_Freight_Code.Designer.cs" />
+    <Compile Remove="Migrations\20200716072247_Tables_WGS_Freight_Codess.cs" />
+    <Compile Remove="Migrations\20200716072247_Tables_WGS_Freight_Codess.Designer.cs" />
+    <Compile Remove="Migrations\20200716091417_Tables_WGS_Freight_Codess_PK.cs" />
+    <Compile Remove="Migrations\20200716091417_Tables_WGS_Freight_Codess_PK.Designer.cs" />
+    <Compile Remove="Migrations\20200716092245_Tables_WGS_Freight_Codess_PKkk.cs" />
+    <Compile Remove="Migrations\20200716092245_Tables_WGS_Freight_Codess_PKkk.Designer.cs" />
+    <Compile Remove="Migrations\20200716150613_Added_Company_FK_For_WGS.cs" />
+    <Compile Remove="Migrations\20200716150613_Added_Company_FK_For_WGS.Designer.cs" />
+    <Compile Remove="Migrations\20200716152336_Added_Company_FK_For_WGS.cs" />
+    <Compile Remove="Migrations\20200716152336_Added_Company_FK_For_WGS.Designer.cs" />
+    <Compile Remove="Migrations\20200718094411_Add_Accesrails_Table.cs" />
+    <Compile Remove="Migrations\20200718094411_Add_Accesrails_Table.Designer.cs" />
+    <Compile Remove="Migrations\20200718094643_Add_Accesrails_Table.cs" />
+    <Compile Remove="Migrations\20200718094643_Add_Accesrails_Table.Designer.cs" />
+    <Compile Remove="Migrations\20200718094839_Add_Accesrails_Table.cs" />
+    <Compile Remove="Migrations\20200718094839_Add_Accesrails_Table.Designer.cs" />
+    <Compile Remove="Migrations\20200721141514_Client_Link_Table.cs" />
+    <Compile Remove="Migrations\20200721141514_Client_Link_Table.Designer.cs" />
+    <Compile Remove="Migrations\20200728073112_Add_Roue_Table_Relations.cs" />
+    <Compile Remove="Migrations\20200728073112_Add_Roue_Table_Relations.Designer.cs" />
+    <Compile Remove="Migrations\20200816091953_Update_invoice_Tables_columns.cs" />
+    <Compile Remove="Migrations\20200816091953_Update_invoice_Tables_columns.Designer.cs" />
+    <Compile Remove="Migrations\20200816094202_Update_invoice_Tables_columns.cs" />
+    <Compile Remove="Migrations\20200816094202_Update_invoice_Tables_columns.Designer.cs" />
+    <Compile Remove="Migrations\20201017062209_Remove_Types_From_Company.cs" />
+    <Compile Remove="Migrations\20201017062209_Remove_Types_From_Company.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML.Report" Version="0.2.4" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.11.0" />
+    <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.1.7" />
+    <PackageReference Include="Microsoft.Azure.Storage.Common" Version="11.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.0" />
+    <PackageReference Include="CsvHelper" Version="15.0.2" />
+    <PackageReference Include="SendGrid" Version="9.19.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+  </ItemGroup>
+
+</Project>

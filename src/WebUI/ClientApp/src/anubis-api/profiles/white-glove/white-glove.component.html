@@ -1,0 +1,515 @@
+<div class="custmTabset">
+    <tabset>
+        <tab heading="White Glove" id="tab1">
+            <div class="card">
+                <div class="card-header">White Glove</div>
+                <div class="card-body">
+                    <table class="table table-striped" *ngIf="wgcGrid">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Miles<br /><br />
+                                    Minimum Charges 
+                                </th>
+                                <th *ngFor="let column of wgcGrid['miles']">
+                                    {{ column.labelValue }}<br /><br />{{
+                                        column.price
+                                    }}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let row of wgcGrid.weights">
+                                <td class="">
+                                    {{ row.labelValue }}
+                                </td>
+                                <td *ngFor="let cel of wgcGrid.miles">
+                                    <div *ngFor="let col of wgcGrid.weightPrice">
+                                        <div *ngIf="
+                                                col.companyWGSWeight_Id ==
+                                                    row.id &&
+                                                cel.id == col.companyWGSMiles_Id
+                                            " class="form-group col-md-4">
+                                            <div class="row">
+                                                <div class="col-sm-6"> <label>{{ col.price }}</label></div>
+                                                <div class="col-sm-6">
+                                                    <a (click)="
+                                                    showPriceModal(
+                                                        priceModel,
+                                                        col.id,
+                                                        col,
+                                                        row.labelValue,
+                                                        cel.labelValue
+                                                    )
+                                                " class="btn">
+                                                        <svg class="icon--edit" width="24" height="24"
+                                                            viewBox="0 0 24 24">
+                                                            <path
+                                                                d="M 19.171875 2 C 18.448125 2 17.724375 2.275625 17.171875 2.828125 L 16 4 L 20 8 L 21.171875 6.828125 C 22.275875 5.724125 22.275875 3.933125 21.171875 2.828125 C 20.619375 2.275625 19.895625 2 19.171875 2 z M 14.5 5.5 L 3 17 L 3 21 L 7 21 L 18.5 9.5 L 14.5 5.5 z">
+                                                            </path>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--
+                                <td *ngIf="(col.companyWGSWeight_Id == row.id && cel.id == col.companyWGSMiles_Id && row.id == cel.id)">
+                                    P-{{col.price}} M-{{cel.id}}W-{{row.id}}
+                                </td>
+                                -->
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">Accessorial</div>
+                <div class="card-body">
+                    <div class="card-top-actions">
+                        <button class="btn btn-primary" (click)="
+                                showAccessorialModal(accessorialModel, '', '')
+                            ">
+                            Add Accessorial
+                        </button>
+                    </div>
+
+                    <app-table *ngIf="wgAcces" [columns]="{
+                            id: 'ID',
+                            freightCode: 'Freight Code'
+                        }" [sort]="init.sort" [data]="wgAcces.data" [total]="wgAcces.total" [loading]="loading"
+                        (gridEvent)="gridUpdateAcces($event)" [rowTemplate]="rowTemplate2">
+
+                        <div class="tools">
+                            <button (click)="exportwgAccess()">
+                                <svg class="icon--excel" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M 11.033203 3.2207031 C 10.958186 3.2183086 10.882062 3.2229062 10.804688 3.2382812 L 2.8046875 4.8398438 C 2.3366875 4.9338437 2 5.3433125 2 5.8203125 L 2 18.179688 C 2 18.656688 2.3366875 19.066156 2.8046875 19.160156 L 10.804688 20.761719 C 11.423687 20.885719 12 20.410297 12 19.779297 L 12 4.2207031 C 12 3.6685781 11.558326 3.2374648 11.033203 3.2207031 z M 14 5 L 14 7 L 16 7 L 16 9 L 14 9 L 14 11 L 16 11 L 16 13 L 14 13 L 14 15 L 16 15 L 16 17 L 14 17 L 14 19 L 21 19 C 21.552 19 22 18.552 22 18 L 22 6 C 22 5.448 21.552 5 21 5 L 14 5 z M 18 7 L 20 7 L 20 9 L 18 9 L 18 7 z M 5.4375 8.296875 C 5.7495 8.296875 6.0323438 8.4854375 6.1523438 8.7734375 L 6.8769531 10.511719 C 6.9519531 10.692719 7.0084063 10.902625 7.0664062 11.140625 L 7.0917969 11.140625 C 7.1247969 10.997625 7.1919688 10.779141 7.2929688 10.494141 L 8.1328125 8.703125 C 8.2488125 8.455125 8.4974844 8.296875 8.7714844 8.296875 C 9.3034844 8.296875 9.6444844 8.8620312 9.3964844 9.3320312 L 8.0078125 11.966797 L 9.4140625 14.599609 C 9.6780625 15.099609 9.3179531 15.703125 8.7519531 15.703125 C 8.4599531 15.703125 8.1923125 15.533578 8.0703125 15.267578 L 7.1582031 13.287109 C 7.1162031 13.202109 7.0663906 13.032922 7.0253906 12.794922 L 7.0097656 12.794922 C 6.9847656 12.908922 6.934375 13.079594 6.859375 13.308594 L 5.9277344 15.296875 C 5.8117344 15.544875 5.5611094 15.703125 5.2871094 15.703125 L 5.2011719 15.703125 C 4.6621719 15.703125 4.3210312 15.123344 4.5820312 14.652344 L 6.0605469 11.994141 L 4.7480469 9.421875 C 4.4860469 8.906875 4.8595 8.296875 5.4375 8.296875 z M 18 11 L 20 11 L 20 13 L 18 13 L 18 11 z M 18 15 L 20 15 L 20 17 L 18 17 L 18 15 z">
+                                    </path>
+                                </svg>
+                                Export
+                            </button>
+                        </div>
+
+                    </app-table>
+
+                    <ng-template #packageTemplate let-lot="row">
+                        <ng-container *ngIf="lot.unique.length">
+                            {{ lot.containers.length }}
+                            <ng-container *ngIf="lot.unique.length == 1">{{ lot.unique[0] }}(s)</ng-container>
+                            <ng-container *ngIf="lot.unique.length > 1">Mixed</ng-container>
+                        </ng-container>
+                        <ng-container *ngIf="!lot.unique.length">
+                            None
+                        </ng-container>
+                    </ng-template>
+
+                    <ng-template #rowTemplate2 let-lot="row">
+                        <button (click)="
+                                showAccessorialModal(
+                                    accessorialModel,
+                                    lot.id,
+                                    lot
+                                )
+                            ">
+                            <svg class="icon--edit" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M 19.171875 2 C 18.448125 2 17.724375 2.275625 17.171875 2.828125 L 16 4 L 20 8 L 21.171875 6.828125 C 22.275875 5.724125 22.275875 3.933125 21.171875 2.828125 C 20.619375 2.275625 19.895625 2 19.171875 2 z M 14.5 5.5 L 3 17 L 3 21 L 7 21 L 18.5 9.5 L 14.5 5.5 z">
+                                </path>
+                            </svg>
+                        </button>
+                        <button (click)="showDeleteModel(deleteModel, lot.id)">
+                            <svg class="icon--trash" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M 10 2 L 9 3 L 5 3 C 4.4 3 4 3.4 4 4 C 4 4.6 4.4 5 5 5 L 7 5 L 17 5 L 19 5 C 19.6 5 20 4.6 20 4 C 20 3.4 19.6 3 19 3 L 15 3 L 14 2 L 10 2 z M 5 7 L 5 20 C 5 21.1 5.9 22 7 22 L 17 22 C 18.1 22 19 21.1 19 20 L 19 7 L 5 7 z M 9 9 C 9.6 9 10 9.4 10 10 L 10 19 C 10 19.6 9.6 20 9 20 C 8.4 20 8 19.6 8 19 L 8 10 C 8 9.4 8.4 9 9 9 z M 15 9 C 15.6 9 16 9.4 16 10 L 16 19 C 16 19.6 15.6 20 15 20 C 14.4 20 14 19.6 14 19 L 14 10 C 14 9.4 14.4 9 15 9 z">
+                                </path>
+                            </svg>
+                        </button>
+                    </ng-template>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">Labour Cost</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Labour Cost</label>
+                                <input class="form-control" type="number" placeholder="Labour Cost"
+                                    [formControl]="labourCost" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <br>
+                                <button class="btn btn-primary" (click)="insertLabourCost()">
+                                    Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </tab>
+        <tab heading="Weight">
+            <div class="card">
+                <div class="card-header">Weight</div>
+                <div class="card-body">
+                    <div class="card-top-actions">
+                        <button class="btn btn-primary" (click)="showModal(weightModel, '', '')">
+                            Add Weight Range
+                        </button>
+                    </div>
+
+                    <app-table *ngIf="wg" [columns]="{
+                            labelValue: 'LBL',
+                            from: 'From',
+                            to: 'To'
+                        }" [sort]="init.sort" [data]="wg.data" [total]="wg.total" [loading]="loading"
+                        (gridEvent)="gridUpdate($event)" [rowTemplate]="rowTemplate1">
+                        <div class="tools">
+                            <button (click)="exportWG()">
+                                <svg class="icon--excel" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M 11.033203 3.2207031 C 10.958186 3.2183086 10.882062 3.2229062 10.804688 3.2382812 L 2.8046875 4.8398438 C 2.3366875 4.9338437 2 5.3433125 2 5.8203125 L 2 18.179688 C 2 18.656688 2.3366875 19.066156 2.8046875 19.160156 L 10.804688 20.761719 C 11.423687 20.885719 12 20.410297 12 19.779297 L 12 4.2207031 C 12 3.6685781 11.558326 3.2374648 11.033203 3.2207031 z M 14 5 L 14 7 L 16 7 L 16 9 L 14 9 L 14 11 L 16 11 L 16 13 L 14 13 L 14 15 L 16 15 L 16 17 L 14 17 L 14 19 L 21 19 C 21.552 19 22 18.552 22 18 L 22 6 C 22 5.448 21.552 5 21 5 L 14 5 z M 18 7 L 20 7 L 20 9 L 18 9 L 18 7 z M 5.4375 8.296875 C 5.7495 8.296875 6.0323438 8.4854375 6.1523438 8.7734375 L 6.8769531 10.511719 C 6.9519531 10.692719 7.0084063 10.902625 7.0664062 11.140625 L 7.0917969 11.140625 C 7.1247969 10.997625 7.1919688 10.779141 7.2929688 10.494141 L 8.1328125 8.703125 C 8.2488125 8.455125 8.4974844 8.296875 8.7714844 8.296875 C 9.3034844 8.296875 9.6444844 8.8620312 9.3964844 9.3320312 L 8.0078125 11.966797 L 9.4140625 14.599609 C 9.6780625 15.099609 9.3179531 15.703125 8.7519531 15.703125 C 8.4599531 15.703125 8.1923125 15.533578 8.0703125 15.267578 L 7.1582031 13.287109 C 7.1162031 13.202109 7.0663906 13.032922 7.0253906 12.794922 L 7.0097656 12.794922 C 6.9847656 12.908922 6.934375 13.079594 6.859375 13.308594 L 5.9277344 15.296875 C 5.8117344 15.544875 5.5611094 15.703125 5.2871094 15.703125 L 5.2011719 15.703125 C 4.6621719 15.703125 4.3210312 15.123344 4.5820312 14.652344 L 6.0605469 11.994141 L 4.7480469 9.421875 C 4.4860469 8.906875 4.8595 8.296875 5.4375 8.296875 z M 18 11 L 20 11 L 20 13 L 18 13 L 18 11 z M 18 15 L 20 15 L 20 17 L 18 17 L 18 15 z">
+                                    </path>
+                                </svg>
+                                Export
+                            </button>
+                        </div>
+
+                    </app-table>
+
+                    <ng-template #packageTemplate let-lot="row">
+                        <ng-container *ngIf="lot.unique.length">
+                            {{ lot.containers.length }}
+                            <ng-container *ngIf="lot.unique.length == 1">{{ lot.unique[0] }}(s)</ng-container>
+                            <ng-container *ngIf="lot.unique.length > 1">Mixed</ng-container>
+                        </ng-container>
+                        <ng-container *ngIf="!lot.unique.length">
+                            None
+                        </ng-container>
+                    </ng-template>
+
+                    <ng-template #rowTemplate1 let-lot="row">
+                        <button (click)="showModal(weightModel, lot.id, lot)">
+                            <svg class="icon--edit" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M 19.171875 2 C 18.448125 2 17.724375 2.275625 17.171875 2.828125 L 16 4 L 20 8 L 21.171875 6.828125 C 22.275875 5.724125 22.275875 3.933125 21.171875 2.828125 C 20.619375 2.275625 19.895625 2 19.171875 2 z M 14.5 5.5 L 3 17 L 3 21 L 7 21 L 18.5 9.5 L 14.5 5.5 z">
+                                </path>
+                            </svg>
+                        </button>
+                    </ng-template>
+                </div>
+            </div>
+        </tab>
+        <tab heading="Miles">
+            <div class="card">
+                <div class="card-header">Miles</div>
+                <div class="card-body">
+                    <div class="card-top-actions">
+                        <button class="btn btn-primary" (click)="showMileModal(mileModel, '', '')">
+                            Add Miles Range
+                        </button>
+                    </div>
+
+                    <app-table *ngIf="mg" [columns]="{
+                            labelValue: 'Miles',
+                            from: 'From',
+                            to: 'To',
+                            price: 'Minimum Charge',
+                            truckSize: 'Truck Size'
+                        }" [templates]="{
+                            price: MinimumCharge
+                        }" [sort]="init.sort" [data]="mg.data" [total]="mg.total" [loading]="loading"
+                        (gridEvent)="gridUpdateMiles($event)" [rowTemplate]="rowTemplate">
+                        <div class="tools">
+                            <button (click)="exportMiles()">
+                                <svg class="icon--excel" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M 11.033203 3.2207031 C 10.958186 3.2183086 10.882062 3.2229062 10.804688 3.2382812 L 2.8046875 4.8398438 C 2.3366875 4.9338437 2 5.3433125 2 5.8203125 L 2 18.179688 C 2 18.656688 2.3366875 19.066156 2.8046875 19.160156 L 10.804688 20.761719 C 11.423687 20.885719 12 20.410297 12 19.779297 L 12 4.2207031 C 12 3.6685781 11.558326 3.2374648 11.033203 3.2207031 z M 14 5 L 14 7 L 16 7 L 16 9 L 14 9 L 14 11 L 16 11 L 16 13 L 14 13 L 14 15 L 16 15 L 16 17 L 14 17 L 14 19 L 21 19 C 21.552 19 22 18.552 22 18 L 22 6 C 22 5.448 21.552 5 21 5 L 14 5 z M 18 7 L 20 7 L 20 9 L 18 9 L 18 7 z M 5.4375 8.296875 C 5.7495 8.296875 6.0323438 8.4854375 6.1523438 8.7734375 L 6.8769531 10.511719 C 6.9519531 10.692719 7.0084063 10.902625 7.0664062 11.140625 L 7.0917969 11.140625 C 7.1247969 10.997625 7.1919688 10.779141 7.2929688 10.494141 L 8.1328125 8.703125 C 8.2488125 8.455125 8.4974844 8.296875 8.7714844 8.296875 C 9.3034844 8.296875 9.6444844 8.8620312 9.3964844 9.3320312 L 8.0078125 11.966797 L 9.4140625 14.599609 C 9.6780625 15.099609 9.3179531 15.703125 8.7519531 15.703125 C 8.4599531 15.703125 8.1923125 15.533578 8.0703125 15.267578 L 7.1582031 13.287109 C 7.1162031 13.202109 7.0663906 13.032922 7.0253906 12.794922 L 7.0097656 12.794922 C 6.9847656 12.908922 6.934375 13.079594 6.859375 13.308594 L 5.9277344 15.296875 C 5.8117344 15.544875 5.5611094 15.703125 5.2871094 15.703125 L 5.2011719 15.703125 C 4.6621719 15.703125 4.3210312 15.123344 4.5820312 14.652344 L 6.0605469 11.994141 L 4.7480469 9.421875 C 4.4860469 8.906875 4.8595 8.296875 5.4375 8.296875 z M 18 11 L 20 11 L 20 13 L 18 13 L 18 11 z M 18 15 L 20 15 L 20 17 L 18 17 L 18 15 z">
+                                    </path>
+                                </svg>
+                                Export
+                            </button>
+                        </div>
+
+                    </app-table>
+
+                    <ng-template #packageTemplate let-lot="row">
+                        <ng-container *ngIf="lot.unique.length">
+                            {{ lot.containers.length }}
+                            <ng-container *ngIf="lot.unique.length == 1">{{ lot.unique[0] }}(s)</ng-container>
+                            <ng-container *ngIf="lot.unique.length > 1">Mixed</ng-container>
+                        </ng-container>
+                        <ng-container *ngIf="!lot.unique.length">
+                            None
+                        </ng-container>
+                    </ng-template>
+
+                    <ng-template #rowTemplate let-lot="row">
+                        <button (click)="showMileModal(mileModel, lot.id, lot)">
+                            <svg class="icon--edit" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M 19.171875 2 C 18.448125 2 17.724375 2.275625 17.171875 2.828125 L 16 4 L 20 8 L 21.171875 6.828125 C 22.275875 5.724125 22.275875 3.933125 21.171875 2.828125 C 20.619375 2.275625 19.895625 2 19.171875 2 z M 14.5 5.5 L 3 17 L 3 21 L 7 21 L 18.5 9.5 L 14.5 5.5 z">
+                                </path>
+                            </svg>
+                        </button>
+                    </ng-template>
+                </div>
+            </div>
+        </tab>
+    </tabset>
+</div>
+
+<!--Modal-->
+<form class="mt30" [formGroup]="wWGform">
+    <ng-template #weightModel>
+        <div class="modal-header">
+            <h4 class="modal-title" *ngIf="editid == ''">Add Weight</h4>
+            <h4 class="modal-title" *ngIf="editid != ''">Edit Weight</h4>
+            <button type="button" class="close" aria-label="Close" (click)="hideModel('W')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!--<input type="hidden" [(ngModel)]="weight.company_Id" />-->
+            <div class="form-group">
+                <label>From <span>*</span></label>
+                <input class="form-control" type="number" placeholder="From" formControlName="wfrom" [ngClass]="{
+                        'is-invalid': submitted && formwWG.wfrom.errors
+                    }" />
+                <div *ngIf="submitted && formwWG.wfrom.errors" class="invalid-feedback">
+                    <div *ngIf="formwWG.wfrom.errors.required">
+                        From is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>To <span>*</span></label>
+                <input class="form-control" type="number" placeholder="To" formControlName="wto" [ngClass]="{
+                        'is-invalid': submitted && formwWG.wto.errors
+                    }" />
+                <div *ngIf="submitted && formwWG.wto.errors" class="invalid-feedback">
+                    <div *ngIf="formwWG.wto.errors.required">
+                        To is required
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="text-right">
+                <button class="btn btn-default" (click)="hideModel('W')">
+                    Cancel
+                </button>
+                <button class="btn btn-primary" (click)="addWeight()" *ngIf="editid == ''">
+                    Save
+                </button>
+                <button class="btn btn-primary" (click)="addWeight()" *ngIf="editid != ''">
+                    Update
+                </button>
+            </div>
+        </div>
+    </ng-template>
+</form>
+
+<form class="mt30" [formGroup]="mWGform">
+    <ng-template #mileModel>
+        <div class="modal-header">
+            <h4 class="modal-title" *ngIf="editid == ''">Add Mile</h4>
+            <h4 class="modal-title" *ngIf="editid != ''">Edit Mile</h4>
+
+            <button type="button" class="close" aria-label="Close" (click)="hideModel('M')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!--<input type="hidden" [(ngModel)]="mile.company_Id" />-->
+            <div class="form-group">
+                <label>From <span>*</span></label>
+                <input class="form-control" type="number" placeholder="From" formControlName="mfrom" [ngClass]="{
+                        'is-invalid': submitted && formmWG.mfrom.errors
+                    }" />
+                <div *ngIf="
+                        (formmWG.mfrom.dirty || formmWG.mfrom.touched || submitted) &&
+                        formmWG.mfrom.errors
+                    " class="invalid-feedback">
+                    <div *ngIf="
+                        formmWG.mfrom.errors.required">
+                        From is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>To <span>*</span></label>
+                <input class="form-control" type="number" placeholder="To" formControlName="mto" [ngClass]="{
+                        'is-invalid': submitted && formmWG.mto.errors
+                    }" />
+                <div *ngIf="
+                        (formmWG.mto.dirty || formmWG.mto.touched || submitted) &&
+                        formmWG.mto.errors
+                    " class="invalid-feedback">
+                    <div *ngIf="
+                    formmWG.mto.errors.required">
+                        To is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Minimum Charge</label>
+                <input class="form-control" type="number" placeholder="Price" formControlName="mprice" [ngClass]="{
+                        'is-invalid': submitted && formmWG.mprice.errors
+                    }" />
+                    <div *ngIf="submitted && formmWG.mprice.errors" class="invalid-feedback">
+                        Price must be greater than or equal to 0.
+                    </div>                  
+            </div>
+
+            <div class="form-group">
+                <label>Truck Size</label>
+                <select
+                    class="custom-select"
+                    formControlName="truckSize"
+                    [ngClass]="{
+                        'is-invalid':
+                            submitted && formmWG.truckSize.errors}">
+                    <option value="0" disabled>Select</option>
+                    <option
+                        *ngFor="let tSize of truckSizes"
+                        value="{{ tSize.value }}">
+                        {{ tSize.text }}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="text-right">
+                <button class="btn btn-default" (click)="hideModel('M')">
+                    Cancel
+                </button>
+                <button class="btn btn-primary" (click)="addMile()" *ngIf="editid == ''">
+                    Save
+                </button>
+                <button class="btn btn-primary" (click)="addMile()" *ngIf="editid != ''">
+                    Update
+                </button>
+            </div>
+        </div>
+    </ng-template>
+</form>
+
+<form class="mt30" [formGroup]="pWGform">
+    <ng-template #priceModel>
+        <div class="modal-header">
+            <h4 class="modal-title" *ngIf="editid != ''">Edit price</h4>
+            <button type="button" class="close float-right" aria-label="Close" (click)="hideModel('P')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!--<input type="hidden" [(ngModel)]="price.company_Id" />-->
+            <div class="form-group">
+                <label>Mile - </label>&nbsp;&nbsp;
+                {{ formpWG.MlabelValue.value }}
+            </div>
+            <div class="form-group">
+                <label>Weight - </label> &nbsp; &nbsp;
+                {{ formpWG.WlabelValue.value }}
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input class="form-control" type="number" placeholder="Price" formControlName="pprice" [ngClass]="{
+                        'is-invalid': submitted && formpWG.pprice.errors
+                    }" />
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="text-right">
+                <button class="btn btn-default" (click)="hideModel('P')">
+                    Cancel
+                </button>
+                <button class="btn btn-primary" (click)="editPrice()">
+                    Save
+                </button>
+            </div>
+        </div>
+    </ng-template>
+</form>
+<form class="mt30" [formGroup]="aWGform">
+    <ng-template #accessorialModel>
+        <div class="modal-header">
+            <h4 class="modal-title" *ngIf="editid == ''">Add Accessorial</h4>
+            <h4 class="modal-title" *ngIf="editid != ''">Edit Accessorial</h4>
+
+            <button type="button" class="close" aria-label="Close" (click)="hideModel('A')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div>
+                <label>Freight Code <span>*</span> </label>
+                <select class="custom-select" formControlName="freightCodeid"
+                    [ngClass]="{ 'is-invalid': submitted && formaWG.freightCodeid.errors }">
+                    <option disabled value="0">Select</option>
+                    <option *ngFor="let freightCode of freightCodes" value="{{ freightCode.id }}">
+                        {{ freightCode.name }}
+                    </option>
+                </select>
+                <div *ngIf="
+                    (formaWG.freightCodeid.dirty || formaWG.freightCodeid.touched || submitted) &&
+                    formaWG.freightCodeid.errors
+                " class="invalid-feedback">
+                    <div *ngIf="
+                    formaWG.freightCodeid.errors.required || formaWG.freightCodeid.errors.min
+                    ">
+                        Freight Code is required
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="form-group">
+                <label>Default Price</label>
+                <input class="form-control" type="number" placeholder="Default Price" formControlName="accsdefaultPrice" [ngClass]="{'is-invalid': submitted && formaWG.accsdefaultPrice.errors}" />
+            </div> -->
+            <!--<div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="isFixedPrice" [(ngModel)]="accesrail.accsisFixedPrice" />
+                <label class="custom-control-label" for="isFixedPrice">isFixedPrice</label>
+            </div>-->
+        </div>
+        <div class="modal-footer">
+            <div class="text-right">
+                <button class="btn btn-default" (click)="hideModel('A')">
+                    Cancel
+                </button>
+                <button class="btn btn-primary" (click)="addEditAccesrail()" *ngIf="editid == ''">
+                    Save
+                </button>
+                <button class="btn btn-primary" (click)="addEditAccesrail()" *ngIf="editid != ''">
+                    Update
+                </button>
+            </div>
+        </div>
+    </ng-template>
+</form>
+
+<ng-template #deleteModel>
+    <div class="modal-header">
+        <h3>Are you sure you want to delete this Record?</h3>
+        <button type="button" class="close" (click)="hideModel('D')">
+            &times;
+        </button>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-default" (click)="hideModel('D')">No</button>
+        <button class="btn btn-danger" (click)="deleteAccessorial()">
+            Yes
+        </button>
+    </div>
+</ng-template>
